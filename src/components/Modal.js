@@ -10,7 +10,7 @@ function Modal({ show, onClose, children }) {
   }
 
   return (
-      <div className="modal-dialog">
+    <div className="modal-overlay">
         <button className="modal-close" onClick={handleClose}>
           Close
         </button>
