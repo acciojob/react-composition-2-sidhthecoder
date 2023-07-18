@@ -6,7 +6,7 @@ const Modal = ({visible,onClose,children}) => {
     <div className='model-overlay'onClick={onClose}>
         <div className="model-content">
           <button className="model-close">Close</button>
-          <p className="modal p">{children}</p>
+          {children}
         </div>
     </div>
   )
