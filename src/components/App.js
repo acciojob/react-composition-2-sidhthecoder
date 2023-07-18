@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 
+const App = () => {
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -14,12 +15,18 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleOpenModal}>Show Modal</button>
+      <button onClick={() => setShowModal(true)}>Show Modal</button>
+      <Modal show={showModal} onClose={handleCloseModal}/>
+
+
+      <button onClick={handleOpenModal}>Open Modal</button>
       <Modal show={showModal} onClose={handleCloseModal}>
-        <p className='model-p'>This is the content of the modal.</p>
+        <h1>Show Modal</h1>
+        <p>This is the content of the modal.</p>
       </Modal>
     </div>
   );
+};
 }
 
 export default App;
