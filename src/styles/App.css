@@ -1,0 +1,22 @@
+.btn,.model-close{
+    border:none;
+    border-radius:5px;
+    margin:10px;
+    padding:4px 10px;
+    color:#fff;
+    background-color: #c84f04;
+    font-size: larger;
+}
+
+.model-content{
+    border:4px solid #367400;
+    height:120px;
+    width:500px;
+    margin:10px;
+    border-radius: 5px;
+    background-color: rgb(70, 165, 182);
+}
+
+.model-p{
+    margin: 10px;
+}
