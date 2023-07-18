@@ -1,7 +1,5 @@
 import React from 'react';
 import '../styles/App.css'
-const Modal = ({ show, onClose}) => {
-
 
 function Modal({ show, onClose, children }) {
   const handleClose = () => {
@@ -27,6 +25,6 @@ function Modal({ show, onClose, children }) {
     </div>
   );
 };
-}
+
 
 export default Modal;

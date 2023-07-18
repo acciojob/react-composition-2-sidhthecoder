@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 
-const App = () => {
+
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -27,6 +27,5 @@ function App() {
     </div>
   );
 };
-}
 
 export default App;
