@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Modal({ show, onClose, children }) {
   const handleClose = () => {
     onClose();
   };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.modal-dialog')) {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    if (show) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [show]);
 
   if (!show) {
     return null;
