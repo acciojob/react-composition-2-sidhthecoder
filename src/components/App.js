@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <button className='btn' onClick={()=>setShow(true)}>Show Modal</button>
       <Modal visible={show} onClose={()=>setShow(false)}>
-        This is the content of the modal.
+        <p className='model-p'>This is the content of the modal.</p>
       </Modal>
     </div>
   )
