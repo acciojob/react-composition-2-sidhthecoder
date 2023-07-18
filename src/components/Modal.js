@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Model = ({visible,onClose,children}) => {
+const Modal = ({visible,onClose,children}) => {
     if (!visible) return null;
   return (
     <div className='model-overlay'onClick={onClose}>
@@ -12,4 +12,4 @@ const Model = ({visible,onClose,children}) => {
   )
 }
 
-export default Model
+export default Modal
