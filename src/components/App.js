@@ -14,11 +14,12 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleOpenModal}>Open Modal</button>
-      <Modal show={showModal} onClose={handleCloseModal}>
-        <h1>Show Modal</h1>
-        <p>This is the content of the modal.</p>
-      </Modal>
+      <button onClick={handleOpenModal}>Show Modal</button>
+      {showModal && (
+        <Modal show={showModal} onClose={handleCloseModal}>
+          <p>This is the content of the modal.</p>
+        </Modal>
+      )}
     </div>
   );
 }

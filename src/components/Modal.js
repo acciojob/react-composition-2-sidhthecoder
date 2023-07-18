@@ -23,19 +23,15 @@ function Modal({ show, onClose, children }) {
     };
   }, [show]);
 
-  if (!show) {
-    return null;
-  }
-
   return (
-    <div className="modal-overlay">
-      <div className="modal-dialog">
-        <button className="modal-close" onClick={handleClose}>
+    show && (
+        <div className="modal-dialog">
+          <button className="modal-close" onClick={handleClose}>
           Close
-        </button>
-        {children}
-      </div>
-    </div>
+          </button>
+          {children}
+        </div>
+    )
   );
 }
 
